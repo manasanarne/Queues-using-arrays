@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #define MAX 20
 int a[MAX],front=-1,rear=-1;
-void enque(int x)
+void enqueue(int x)
 {
     if(rear==MAX-1)
     {
@@ -22,9 +22,8 @@ void enque(int x)
         a[rear]=x;
     }
 }
-int deque()
+int dequeue(int x)
 {
-    int x;
     if(front==-1)
     {
         printf("Queue is underflown");
@@ -70,9 +69,9 @@ void main()
         {
             case 1: printf("\nEnter the element to insert");
                     scanf("%d",&x);
-                    enque(x);
+                    enqueue(x);
                     break;
-            case 2: x=deque();
+            case 2: x=dequeue(x);
                     if(x==-1)
                     {
                         printf("Queue is underflown");
